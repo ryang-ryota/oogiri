@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>AI大喜利チャット</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/sockjs-client@1.6.1/dist/sockjs.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@stomp/stompjs@7.1.1/bundles/stomp.umd.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <h1>AI大喜利チャット</h1>
+    <div class="subtitle">お題をAIに生成してもらい、選んだお題でAIの回答を楽しもう！</div>
+    <button id="requestThemesBtn">お題を生成する</button>
+    <div class="custom-theme-area">
+        <input id="customThemeInput" type="text" placeholder="自分でお題を入力…" maxlength="100">
+        <button id="submitCustomThemeBtn">このお題でAIに回答させる</button>
+    </div>
+    <div id="themes"></div>
+    <div id="responses"></div>
+    <div id="loading" class="loading" style="display: none;">
+        <div class="spinner"></div>
+        <div class="loading-message">AIが考え中…</div>
+    </div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
